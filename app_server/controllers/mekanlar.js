@@ -8,6 +8,7 @@ const anaSayfa=function(req, res, next) {
        'siteAd':'Mekan32',
        'aciklama':'Isparta civarındaki mekanları keşfedin'
      },
+     'footer':'Anıl Er 2020',
      'mekanlar':[
        {
          'ad':'Starbucks',
@@ -55,6 +56,7 @@ const mekanBilgisi=function(req, res) {
   res.render('mekan-detay', { 
     'baslik': 'Mekan Bilgisi',
     'sayfaBaslik':'Starbucks',
+    'footer':'Anıl Er 2020',
     'mekanBilgisi':{
       'ad':'Starbucks',
       'adres':'Iyaşpark AVM',
