@@ -1,5 +1,7 @@
 var mongoose = require('mongoose')
 var Mekan = mongoose.model('mekan')
+
+
 const cevapOlustur = function (res, status, content) {
     res
         .status(status)
@@ -43,7 +45,7 @@ const mekanlariListele = async (req, res) => {
                 adres: mekan.adres,
                 puan: mekan.puan,
                 imkanlar: mekan.imkanlar,
-                mesafe: mekan.mesafe.toFixed() + 'm'
+                mesafe: mekan.mesafe.toFixed()
             }
         });
         cevapOlustur(res, 200, mekanlar);
@@ -156,6 +158,8 @@ const mekanSil = function (req, res) {
         cevapOlustur(res, 404, { "mesaj": "mekanid bulunamadı." });
     }
 }
+
+
 
 module.exports = {
     mekanlariListele,

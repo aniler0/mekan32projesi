@@ -54,8 +54,8 @@ block content
           .well.well-sm.review-header
             span.rating
              +puanOlustur(yorum.puan)
-            span.reviewAuthor=yorum.yorumYapan
-            | &nbsp;
-            small.reviewTimestamp=yorum.tarih
+            span.reviewAuthor #{yorum.yorumYapan},
+            small.reviewTimestamp
+              +tarihiFormatla(yorum.tarih)
           .col-xs-12
-             p=yorum.yorumMetni
+             p #{yorum.yorumMetni}
